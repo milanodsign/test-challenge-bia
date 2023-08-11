@@ -1,0 +1,228 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+.containerBtnBack {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.containerBtnBack>a {
+  height: 100%;
+  text-decoration: none;
+}
+
+.btnBack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--color-text);
+  background: var(--elements);
+  border: none;
+  height: 100%;
+  width: 135px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, .25);
+}
+
+.btnBack>svg {
+  margin-right: 10px;
+}
+
+.containerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.containerFlag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.containerFlag>img {
+  width: 100%;
+  height: auto;
+}
+
+@supports (object-fit: cover) {
+  .containerFlag>img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.containerDataCountry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: relative;
+  width: 575px;
+  height: 400px;
+}
+
+.containerDataCountry>h1 {
+  margin-bottom: 35px;
+  color: var(--color-text);
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.containerDataCountry>span:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 145px;
+  position: relative;
+  margin-bottom: 75px;
+  gap: 10px;
+}
+
+.containerDataCountry>span:nth-child(2)>span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+}
+
+.containerDataCountry>span:nth-child(2)>span>span,
+.borderCountries {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.borderCountries {
+  display: flex;
+}
+
+.borderCountries>span:first-child {
+  width: 135px;
+  height: auto;
+}
+
+.borderCountries>span:last-child {
+  width: calc(100% - 135px);
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.borderCountries>span:last-child>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  color: var(--color-text);
+  background: var(--elements);
+  border-radius: 4px;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, .25);
+}
+
+.data {
+  font-weight: 300;
+}
+
+.data>span:last-child>span {
+  display: none;
+}
+
+.data>span:last-child:after {
+  content: '.';
+}
+
+.borderCountries>span.data>span:last-child:after {
+  content: '';
+}
+
+@media only screen and (max-width:1345px) {
+  .containerInfo {
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .containerBtnBack {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .containerFlag {
+    height: auto;
+  }
+
+  @supports (object-fit: contain) {
+    .containerFlag>img {
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+  }
+}
+
+@media only screen and (max-width: 511px) {
+  .containerDataCountry {
+    height: auto;
+  }
+
+  .containerDataCountry>span:nth-child(2) {
+    flex-direction: column;
+    height: auto;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .containerDataCountry>span:nth-child(2)>span {
+    width: 100%;
+  }
+
+  .borderCountries {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .borderCountries>span:first-child,
+  .borderCountries>span:last-child {
+    width: 100%;
+  }
+}

@@ -1,0 +1,7 @@
+:root {
+    --background: hsl(0, 0%, 98%);
+    --color-text: hsl(200, 15%, 8%);
+    --elements: hsl(0, 0%, 100%);
+    --input-color-background: hsl(0, 0%, 52%);
+    --red: hsl(0, 100%, 50%);
+}
