@@ -4,22 +4,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   darkMode: true,
-  dataCountries: [],
-  singleData: [],
 };
 
 export const InitSlice = createSlice({
   name: 'init',
   initialState,
   reducers: {
-    setDataCountries: (state, action) => {
-      state.dataCountries = action.payload;
-    },
     setDarkMode: (state) => {
       state.darkMode = !state.darkMode;
-    },
-    setSingleData: (state, action) => {
-      state.singleData = action.payload;
     },
   },
 });
@@ -34,6 +26,6 @@ export const fetchGetCountriesByRegion = (region) => (dispatch) => {
   }
 };
 
-export const { setDarkMode, setDataCountries } = InitSlice.actions;
+export const { setDarkMode } = InitSlice.actions;
 
 export default InitSlice.reducer;
